@@ -1,7 +1,7 @@
-import React from 'react'
-import loadable from './loadable'
+import React from "react";
+import loadable from "./loadable";
 
-const DynamicBox =  loadable(() => import('./dynamic-box'));
+const DynamicBox = loadable(() => import("./dynamic-box"));
 
 type Props = { globalState: { text: string } };
 
@@ -10,7 +10,7 @@ const App = ({ globalState: { text } }: Props) => {
     <section className="section">
       <DynamicBox text={text} />
     </section>
-  )
-}
+  );
+};
 
-export default App
+export default App;

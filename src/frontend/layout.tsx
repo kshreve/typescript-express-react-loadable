@@ -1,18 +1,15 @@
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-import App from './components/app'
+import React from "react";
+import { renderToString } from "react-dom/server";
+import App from "./components/app";
 
 export default (helloMessage: string) => {
-
   const GLOBAL_STATE = {
     text: helloMessage,
-  }
+  };
 
-  const application = (
-    <App globalState={GLOBAL_STATE} />
-  )
+  const application = <App globalState={GLOBAL_STATE} />;
 
-  const html = renderToString(application)
+  const html = renderToString(application);
 
   return `
   <!DOCTYPE html>
@@ -32,5 +29,5 @@ export default (helloMessage: string) => {
       <script src="./entry.js"></script>
     </body>
   </html>
-  `
-}
+  `;
+};

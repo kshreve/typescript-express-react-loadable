@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const DynamicBox = ({ text }: { text: string; }) => {
+const DynamicBox = ({ text }: { text: string }) => {
   const [counter, setCounter] = useState(0);
 
   return (
@@ -9,15 +9,12 @@ const DynamicBox = ({ text }: { text: string; }) => {
         {text}, counter: {counter}
       </h1>
       <p className="subtitle">
-        <button
-          onClick={() => setCounter(counter + 1)}
-          className="button"
-        >
+        <button onClick={() => setCounter(counter + 1)} className="button">
           Test
         </button>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default DynamicBox
+export default DynamicBox;
